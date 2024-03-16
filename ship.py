@@ -18,11 +18,16 @@ class Ship():
         
         # Movement flag; start with a ship thaat's not moving.
         self.moving_right = False
+        self.moving_left = False
         
     def update(self):
         """Update the ships position based on the movement flag."""
         if self.moving_right:
             self.rect.x += 1
+        
+        if self.moving_left:
+            self.rect.x -= 1
+            
         
         
         
